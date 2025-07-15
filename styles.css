@@ -1,21 +1,23 @@
 :root {
-  --primary: #e83e8c;    
-  --secondary: #6f42c1;  
-  --accent: #20c997;     
-  --light: #ffe6f0;      
-  --dark: #343a40;       
+  --primary: #e83e8c;    /* Romantic pink */
+  --secondary: #6f42c1;  /* Royal purple */
+  --accent: #20c997;     /* Fresh green */
+  --light: #ffe6f0;      /* Light pink background */
+  --dark: #343a40;       /* Dark text */
 }
 
-body, html {
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   height: 100%;
   font-family: 'Georgia', serif;
   margin: 0;
   padding: 0;
   color: var(--dark);
   line-height: 1.6;
-  background-color: var(--light); 
-  scroll-behavior: smooth;
- 
+  background-color: var(--light);  /* 💖 Light pink background for entire site */
 }
 
 .hero {
@@ -98,24 +100,30 @@ body, html {
   color: white;
 }
 
+/* CSS-only modal with smooth transition */
 .modal {
+  visibility: hidden;
+  opacity: 0;
   position: fixed;
-  top: 0;
+  z-index: 100;
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.7);
-  display: none;
-  z-index: 9999;
+  transition: all 0.3s ease;
+  pointer-events: none;
 }
 
 .modal:target {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal-content {
   background-color: white;
-  margin: 10% auto;
+  margin: 6% auto;
   padding: 30px;
   width: 90%;
   max-width: 500px;
