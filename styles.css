@@ -1,9 +1,9 @@
 :root {
-  --primary: #e83e8c;    /* Romantic pink */
-  --secondary: #6f42c1;  /* Royal purple */
-  --accent: #20c997;     /* Fresh green */
-  --light: #ffe6f0;      /* Light pink background */
-  --dark: #343a40;       /* Dark text */
+  --primary: #e83e8c;  
+  --secondary: #6f42c1; 
+  --accent: #20c997;   
+  --light: #ffe6f0;    
+  --dark: #343a40;     
 }
 
 html {
@@ -17,7 +17,7 @@ body {
   padding: 0;
   color: var(--dark);
   line-height: 1.6;
-  background-color: var(--light);  /* 💖 Light pink background for entire site */
+  background-color: var(--light); 
 }
 
 .hero {
@@ -100,7 +100,6 @@ body {
   color: white;
 }
 
-/* CSS-only modal with smooth transition */
 .modal {
   visibility: hidden;
   opacity: 0;
